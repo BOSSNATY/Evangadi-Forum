@@ -10,17 +10,17 @@ app.use(cors());
 
 app.use(express.json());
 // import database
-const sqlconnection = require("./Server/db/dbconfig");
+const sqlconnection = require("./db/dbconfig");
 
 // user route middleware file
-const userRoutes = require("./Server/routes/userRoute");
+const userRoutes = require("./routes/userRoute");
 
 // question route middleware file
-const questionRoutes = require("./Server/routes/questionRoute");
+const questionRoutes = require("./routes/questionRoute");
 
 // answer route middleware file
 
-const answerRoute = require("./Server/routes/answerRoute");
+const answerRoute = require("./routes/answerRoute");
 
 // user route middleware
 app.use("/api/users", userRoutes);
@@ -38,10 +38,10 @@ if (!fs.existsSync("ca.pem")) {
 
 async function start() {
   try {
-    const result = await sqlconnection.execute("select 'test'");
-    await app.listen(port);
-    console.log("database connection established");
-    console.log(`listening on ${port}`);
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
   } catch (error) {
     console.log(error.message);
   }
