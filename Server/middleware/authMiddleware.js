@@ -8,6 +8,7 @@ function authMiddleware(req, res, next) {
     return res
       .status(StatusCodes.UNAUTHORIZED)
       .json({ msg: "Authentication Invalid" });
+    return;
   }
 
   const token = authHeader.split(" ")[1];
@@ -20,6 +21,7 @@ function authMiddleware(req, res, next) {
     return res
       .status(StatusCodes.UNAUTHORIZED)
       .json({ msg: "Authentication Invalid" });
+    return;
   }
 }
 

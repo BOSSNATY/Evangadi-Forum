@@ -81,7 +81,7 @@ async function login(req, res) {
 
     return res
       .status(StatusCodes.OK)
-      .json({ msg: "user logged in successfully", token });
+      .json({ msg: "user logged in successfully", token, username });
   } catch (error) {
     console.log(error.message);
     return res
@@ -93,7 +93,7 @@ async function login(req, res) {
 async function checkUser(req, res) {
   const username = req.user.username;
   const userid = req.user.userid;
-  res.status(StatusCodes.OK).json({ msg: "Valid user", username, userid });
+  res.status(StatusCodes.OK).json({ username, userid });
 }
 
 module.exports = { register, login, checkUser };

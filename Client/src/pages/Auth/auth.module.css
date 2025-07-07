@@ -1,0 +1,42 @@
+.auth {
+  background-image: url("../../images/first_background.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.auth__Wrapper {
+  margin: 0 50px;
+}
+
+.auth__outerWrapper {
+  /* max-width: 1000px; */
+  padding: 50px 0px;
+}
+.auth__innerWrapper {
+  display: flex;
+  gap: 75px;
+}
+.aboutWrapper {
+  width: 50%;
+}
+.loginRegWrapper {
+  width: 50%;
+}
+/* On medium and larger screens, display side-by-side */
+@media (max-width: 768px) {
+  .auth__innerWrapper {
+    flex-direction: column;
+  }
+  .loginRegWrapper,
+  .aboutWrapper {
+    width: 100%;
+  }
+  .auth__Wrapper {
+    margin: 0;
+    pad: 0;
+  }
+  .auth__outerWrapper {
+    padding: 0;
+    margin: 0;
+  }
+}

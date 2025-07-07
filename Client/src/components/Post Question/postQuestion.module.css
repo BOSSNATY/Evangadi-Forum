@@ -1,0 +1,33 @@
+.outerContainer {
+  background-color: #f9fafa;
+}
+
+.outerWrapper {
+  padding: 40px 0px;
+  align-items: flex-end;
+}
+
+.outerWrapper div h2 {
+  display: inline-block;
+  border-bottom: 2px solid red;
+}
+
+.outerWrapper h1 {
+  text-align: center;
+}
+
+.formContainer div textarea {
+  width: 100%;
+}
+
+.formDescription textarea {
+  height: 150px;
+}
+
+.postButton {
+  border-radius: 5px;
+  height: 35px;
+  color: white;
+  border: none;
+  background-color: #3a59ef;
+}

@@ -1,10 +1,14 @@
 const mysql = require("mysql2");
 
 const sqlconnection = mysql.createPool({
+  host: process.env.HOST,
   user: process.env.USER,
-  database: process.env.DATABASE,
-  host: "localhost",
-  password: process.env.PASSWORD,
+  password: process.env.PASS,
+  database: process.env.NAME,
+  port: process.env.PORT,
+  ssl: {
+    rejectUnauthorized: true,
+  },
   connectionLimit: 10,
 });
 

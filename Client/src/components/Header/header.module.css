@@ -1,0 +1,33 @@
+.header {
+  height: 75px;
+  box-shadow: 0 10px 15px #00000048;
+}
+
+.headerpic {
+  width: 40%;
+}
+
+.headerButton {
+  border-radius: 5px;
+  width: 15%;
+  height: 35px;
+  color: white;
+  border: none;
+  background-color: #3a59ef;
+}
+
+.headerButton:hover {
+  background-color: #fe8402;
+}
+/* 
+@media (max-width: 768px) {
+  html {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 616px) and (max-width: 767.9px) {
+  html {
+    width: 750px;
+  }
+} */

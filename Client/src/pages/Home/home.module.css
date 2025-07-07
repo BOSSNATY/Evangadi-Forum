@@ -1,0 +1,40 @@
+.home__Wrapper {
+  background-color: #f9fafa;
+  height: 100%;
+}
+
+.outer__Wrapper {
+  padding: 50px 0px;
+}
+
+.first__Wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.askButton {
+  border-radius: 5px;
+  height: 35px;
+  color: white;
+  border: none;
+  background-color: #3a59ef;
+}
+
+.username {
+  display: flex;
+  justify-content: center;
+}
+
+.username {
+  color: rgb(248, 50, 50);
+}
+
+.questions {
+  margin-top: 20px;
+}
+
+@media (min-width: 700px) {
+  .first__Wrapper {
+    justify-content: space-around;
+  }
+}

@@ -1,0 +1,20 @@
+.outerWrapper {
+  padding: 25px;
+  width: 66vh;
+}
+
+.about__container {
+  padding: 15px;
+}
+
+.about__container p {
+  color: #fe8402;
+}
+
+.about__container h1 {
+  color: #4b456f;
+}
+
+.about__container_desc p {
+  color: #4b456f;
+}
