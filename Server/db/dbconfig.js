@@ -1,4 +1,5 @@
 const mysql = require("mysql2");
+const fs = require("fs");
 
 const sqlconnection = mysql.createPool({
   host: process.env.HOST,
@@ -7,17 +8,10 @@ const sqlconnection = mysql.createPool({
   database: process.env.NAME,
   port: process.env.PORT,
   ssl: {
+    ca: fs.readFileSync("ca.pem"),
     rejectUnauthorized: true,
   },
   connectionLimit: 10,
 });
-
-// sqlconnection.execute("select 'test' ", (err, result) => {
-//   if (err) {
-//     console.log(err.message);
-//   } else {
-//     console.log(result);
-//   }
-// });
 
 module.exports = sqlconnection.promise();
