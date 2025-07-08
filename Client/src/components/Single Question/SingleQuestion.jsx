@@ -8,6 +8,7 @@ import classes from "./SingleQuestion.module.css";
 import PersonIcon from "@mui/icons-material/Person";
 
 function SingleQuestion() {
+  const Navigate = useNavigate();
   const { questionid } = useParams();
   const [question, setQuestion] = useState(null);
   const [answer, setAnswer] = useState([]);
@@ -50,7 +51,7 @@ function SingleQuestion() {
         questionid,
       });
       alert("Answer Posted successfully");
-      window.location.reload();
+      Navigate("/");
     } catch (error) {
       alert(error?.response?.data?.msg);
       console.log(error.response);
